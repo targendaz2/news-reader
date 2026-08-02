@@ -5,17 +5,29 @@
  * @type {import("prettier").Config}
  */
 const config = {
-  plugins: ['prettier-plugin-organize-imports'],
   organizeImportsSkipDestructiveCodeActions: true,
   printWidth: 140,
   trailingComma: 'all',
   semi: true,
   singleQuote: true,
-  override: [
+  plugins: ['prettier-plugin-organize-imports', 'prettier-plugin-svelte'],
+  overrides: [
     {
-      files: ['**/*.css'],
+      files: '*.css',
       options: {
         singleQuote: false,
+      },
+    },
+    {
+      files: '*.jsonc',
+      options: {
+        trailingComma: 'none',
+      },
+    },
+    {
+      files: '*.svelte',
+      options: {
+        parser: 'svelte',
       },
     },
   ],
