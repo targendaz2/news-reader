@@ -1,0 +1,24 @@
+{
+  "name": "news-reader",
+  "private": true,
+  "workspaces": [
+    "app",
+    "packages/*",
+    "workers/*"
+  ],
+  "packageManager": "yarn@4.18.0",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.1.2",
+    "eslint": "^10.8.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-storybook": "^10.5.5",
+    "eslint-plugin-svelte": "^3.22.0",
+    "globals": "^17.8.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-svelte": "^4.1.1",
+    "typescript": "^6.0.0",
+    "typescript-eslint": "^8.65.0"
+  }
+}
