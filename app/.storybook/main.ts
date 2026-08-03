@@ -9,11 +9,11 @@ import { fileURLToPath } from 'url';
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
  */
 function getAbsolutePath(value: string) {
-	return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
+  return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
 }
 const config: StorybookConfig = {
-	stories: ['../src/**/*.stories.@(js|ts|svelte)'],
-	addons: [getAbsolutePath('@storybook/addon-svelte-csf')],
-	framework: getAbsolutePath('@storybook/sveltekit')
+  stories: ['../src/**/*.stories.@(js|ts|svelte)'],
+  addons: [getAbsolutePath('@storybook/addon-svelte-csf')],
+  framework: getAbsolutePath('@storybook/sveltekit'),
 };
 export default config;

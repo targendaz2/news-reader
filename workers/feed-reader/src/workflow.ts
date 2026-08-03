@@ -13,16 +13,12 @@ export class MyWorkflow extends WorkflowEntrypoint<Env, Params> {
 
     await step.sleep('pause', '20 seconds');
 
-    const result = await step.do(
-      'process data',
-      { retries: { limit: 3, delay: '5 seconds', backoff: 'linear' } },
-      async () => {
-        return {
-          name: event.payload.name ?? 'World',
-          ipCount: data.result.ipv4_cidrs.length,
-        };
-      },
-    );
+    const result = await step.do('process data', { retries: { limit: 3, delay: '5 seconds', backoff: 'linear' } }, async () => {
+      return {
+        name: event.payload.name ?? 'World',
+        ipCount: data.result.ipv4_cidrs.length,
+      };
+    });
 
     return result;
   }
