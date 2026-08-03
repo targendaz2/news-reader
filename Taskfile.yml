@@ -9,3 +9,69 @@ tasks:
     cmds:
       - echo "{{.GREETING}}"
     silent: true
+
+  cf-typegen:app:
+    desc: Generate Cloudflare Workers type definitions for the app package
+    dir: ./app
+    sources:
+      - .vars.dev
+      - wrangler.jsonc
+    generates:
+      - worker-configuration.d.ts
+    cmds:
+      - yarn cf-typegen
+
+  build:app:
+    desc: Build the app package
+    dir: ./app
+    deps:
+      - cf-typegen:app
+    sources:
+      - src/**/*.ts
+      - src/**/*.svelte
+      - exclude: src/**/*.story.ts
+      - exclude: src/**/*.story.svelte
+      - static/**/*
+      - tsconfig.json
+      - vite.config.ts
+    generates:
+      - .svelte-kit/cloudflare/**/*
+    cmds:
+      - yarn build
+
+  deploy:app:
+    desc: Deploy the app package to Cloudflare Workers
+    dir: ./app
+    deps:
+      - build:app
+    cmds:
+      - yarn deploy
+
+  cf-typegen:db:
+    desc: Generate Cloudflare Workers type definitions for the db package
+    dir: ./packages/db
+    sources:
+      - .vars.dev
+      - wrangler.jsonc
+    generates:
+      - worker-configuration.d.ts
+    cmds:
+      - yarn cf-typegen
+
+  cf-typegen:feed-reader:
+    desc: Generate Cloudflare Workers type definitions for the feed-reader package
+    dir: ./workers/feed-reader
+    sources:
+      - .vars.dev
+      - wrangler.jsonc
+    generates:
+      - worker-configuration.d.ts
+    cmds:
+      - yarn cf-typegen
+
+  cf-typegen:
+    desc: Generate Cloudflare Workers type definitions for all packages
+    deps:
+      - cf-typegen:app
+      - cf-typegen:db
+      - cf-typegen:feed-reader
