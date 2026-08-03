@@ -1027,6 +1027,7 @@ __metadata:
     "@sveltejs/adapter-cloudflare": "npm:^7.2.8"
     "@sveltejs/kit": "npm:^2.63.0"
     "@sveltejs/vite-plugin-svelte": "npm:^7.1.2"
+    modern-normalize: "npm:^3.0.1"
     storybook: "npm:^10.5.5"
     svelte: "npm:^5.56.1"
     svelte-check: "npm:^4.6.0"
@@ -4165,6 +4166,13 @@ __metadata:
   dependencies:
     minipass: "npm:^7.1.2"
   checksum: 10c0/5aad75ab0090b8266069c9aabe582c021ae53eb33c6c691054a13a45db3b4f91a7fb1bd79151e6b4e9e9a86727b522527c0a06ec7d45206b745d54cd3097bcec
+  languageName: node
+  linkType: hard
+
+"modern-normalize@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "modern-normalize@npm:3.0.1"
+  checksum: 10c0/2c19be1618178b85006e354337d7dda6758640d138be5f3e247c9ebb5dd5d7845edb0b8753cec659e789bb30e1fafe73e91eaa056a332d89055cbb107d9fecec
   languageName: node
   linkType: hard
 

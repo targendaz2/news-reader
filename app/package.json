@@ -17,6 +17,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "dependencies": {
+    "modern-normalize": "^3.0.1"
+  },
   "devDependencies": {
     "@storybook/addon-svelte-csf": "^5.1.2",
     "@storybook/sveltekit": "^10.5.5",
