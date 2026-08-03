@@ -6,6 +6,7 @@
     "editorconfig.editorconfig",
     "task.vscode-task",
     "vitest.explorer",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "davidanson.vscode-markdownlint"
   ]
 }
