@@ -1018,6 +1018,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@newsie/app@workspace:app":
+  version: 0.0.0-use.local
+  resolution: "@newsie/app@workspace:app"
+  dependencies:
+    "@storybook/addon-svelte-csf": "npm:^5.1.2"
+    "@storybook/sveltekit": "npm:^10.5.5"
+    "@sveltejs/adapter-cloudflare": "npm:^7.2.8"
+    "@sveltejs/kit": "npm:^2.63.0"
+    "@sveltejs/vite-plugin-svelte": "npm:^7.1.2"
+    storybook: "npm:^10.5.5"
+    svelte: "npm:^5.56.1"
+    svelte-check: "npm:^4.6.0"
+    vite: "npm:^8.0.16"
+    wrangler: "npm:^4.97.0"
+  languageName: unknown
+  linkType: soft
+
+"@newsie/db@workspace:packages/db":
+  version: 0.0.0-use.local
+  resolution: "@newsie/db@workspace:packages/db"
+  dependencies:
+    dotenv: "npm:^17.4.2"
+    drizzle-kit: "npm:1.0.0-rc.4"
+    drizzle-orm: "npm:1.0.0-rc.4"
+    tsx: "npm:^4.23.4"
+    wrangler: "npm:^4.118.0"
+  languageName: unknown
+  linkType: soft
+
+"@newsie/rss-reader@workspace:workers/feed-reader":
+  version: 0.0.0-use.local
+  resolution: "@newsie/rss-reader@workspace:workers/feed-reader"
+  dependencies:
+    wrangler: "npm:^4.118.0"
+  languageName: unknown
+  linkType: soft
+
 "@oxc-parser/binding-android-arm-eabi@npm:0.127.0":
   version: 0.127.0
   resolution: "@oxc-parser/binding-android-arm-eabi@npm:0.127.0"
@@ -2041,23 +2078,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"app@workspace:app":
-  version: 0.0.0-use.local
-  resolution: "app@workspace:app"
-  dependencies:
-    "@storybook/addon-svelte-csf": "npm:^5.1.2"
-    "@storybook/sveltekit": "npm:^10.5.5"
-    "@sveltejs/adapter-cloudflare": "npm:^7.2.8"
-    "@sveltejs/kit": "npm:^2.63.0"
-    "@sveltejs/vite-plugin-svelte": "npm:^7.1.2"
-    storybook: "npm:^10.5.5"
-    svelte: "npm:^5.56.1"
-    svelte-check: "npm:^4.6.0"
-    vite: "npm:^8.0.16"
-    wrangler: "npm:^4.97.0"
-  languageName: unknown
-  linkType: soft
-
 "aria-query@npm:5.3.0":
   version: 5.3.0
   resolution: "aria-query@npm:5.3.0"
@@ -2219,18 +2239,6 @@ __metadata:
   checksum: 10c0/6bcfd898662671be15ae7827120472c5667afb3d7429f1f917737f3bf84c4176003228131b643ae74543f17a394446247df090c597bb9a728cce298606ed0aa7
   languageName: node
   linkType: hard
-
-"db@workspace:packages/db":
-  version: 0.0.0-use.local
-  resolution: "db@workspace:packages/db"
-  dependencies:
-    dotenv: "npm:^17.4.2"
-    drizzle-kit: "npm:1.0.0-rc.4"
-    drizzle-orm: "npm:1.0.0-rc.4"
-    tsx: "npm:^4.23.4"
-    wrangler: "npm:^4.118.0"
-  languageName: unknown
-  linkType: soft
 
 "debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.4.3":
   version: 4.4.3
@@ -3008,14 +3016,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"feed-reader@workspace:workers/feed-reader":
-  version: 0.0.0-use.local
-  resolution: "feed-reader@workspace:workers/feed-reader"
-  dependencies:
-    wrangler: "npm:^4.118.0"
-  languageName: unknown
-  linkType: soft
-
 "file-entry-cache@npm:^8.0.0":
   version: 8.0.0
   resolution: "file-entry-cache@npm:8.0.0"
@@ -3541,9 +3541,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"news-reader@workspace:.":
+"newsie-workspace@workspace:.":
   version: 0.0.0-use.local
-  resolution: "news-reader@workspace:."
+  resolution: "newsie-workspace@workspace:."
   dependencies:
     "@eslint/js": "npm:^10.0.1"
     "@types/node": "npm:^26.1.2"
