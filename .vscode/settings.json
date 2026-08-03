@@ -1,6 +1,12 @@
 {
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "files.associations": {
     "wrangler.json": "jsonc"
-  }
+  },
+  "prettier.prettierPath": "./node_modules/.bin/prettier",
+  "prettier.requireConfig": true
 }
