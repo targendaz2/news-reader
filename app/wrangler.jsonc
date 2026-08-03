@@ -5,12 +5,24 @@
   "compatibility_date": "2026-08-02",
   "compatibility_flags": ["nodejs_compat"],
   "observability": {
-    "enabled": true
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true
+    }
   },
   "upload_source_maps": true,
   "minify": true,
   "assets": {
     "binding": "ASSETS",
     "directory": ".svelte-kit/cloudflare"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "newsie.site",
+      "custom_domain": true
+    }
+  ]
 }
