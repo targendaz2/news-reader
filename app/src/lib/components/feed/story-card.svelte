@@ -48,9 +48,9 @@
     <UnreadDot {unread} />
     <div class="body">
       <StoryByline {type} {source} {time} />
-      <h3 class="title" class:unread>{title}</h3>
+      <h3 class:unread>{title}</h3>
       {#if excerpt}
-        <p class="excerpt">{excerpt}</p>
+        <p>{excerpt}</p>
       {/if}
     </div>
   </div>
@@ -58,7 +58,7 @@
 </article>
 
 <style>
-  .row {
+  article {
     display: flex;
     gap: 13px;
     padding: var(--row-pad-y) var(--gutter);
@@ -66,7 +66,7 @@
     align-items: flex-start;
   }
 
-  .hit-area {
+  div.hit-area {
     display: flex;
     flex: 1;
     min-width: 0;
@@ -75,17 +75,17 @@
     cursor: pointer;
   }
 
-  .hit-area:focus-visible {
+  div.hit-area:focus-visible {
     outline: 2px solid var(--focus-ring);
     outline-offset: -2px;
   }
 
-  .body {
+  div.body {
     flex: 1;
     min-width: 0;
   }
 
-  .title {
+  h3 {
     margin: 0;
     font-family: var(--font-display);
     font-size: var(--text-story);
@@ -94,11 +94,11 @@
     color: var(--text-faint);
   }
 
-  .title.unread {
+  h3.unread {
     color: var(--text-body);
   }
 
-  .excerpt {
+  p {
     margin: 5px 0 0;
     font-size: var(--text-excerpt);
     line-height: var(--leading-ui);
