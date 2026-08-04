@@ -18,6 +18,8 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^10.5.6",
+    "@storybook/addon-docs": "^10.5.6",
     "@storybook/addon-svelte-csf": "^5.1.2",
     "@storybook/sveltekit": "^10.5.5",
     "@sveltejs/adapter-cloudflare": "^7.2.8",
