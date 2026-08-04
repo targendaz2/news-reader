@@ -12,6 +12,7 @@
         options: ['link', 'outline', 'dashed'],
       },
       disabled: { control: 'boolean' },
+      children: { table: { disable: true } },
     },
     args: {
       onclick: fn(),
@@ -40,4 +41,5 @@
 <!-- Dashed full-width affordance — + Add a source -->
 <Story name="Dashed" args={{ variant: 'dashed', children: addSource }} />
 
+<!-- Disabled outline pill — Mark as read -->
 <Story name="Disabled" args={{ variant: 'outline', children: markAsRead, disabled: true }} />
