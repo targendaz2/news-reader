@@ -26,9 +26,6 @@
     /** Fills the star to mark this story as saved. */
     saved?: boolean;
 
-    /** Hides the excerpt and tightens vertical padding for dense lists. */
-    compact?: boolean;
-
     /** Called when the row is tapped to open the reader. */
     onOpen?: () => void;
 
@@ -36,18 +33,7 @@
     onToggleSave?: () => void;
   }
 
-  const {
-    source,
-    time,
-    type = 'rss',
-    title,
-    excerpt,
-    unread = true,
-    saved = false,
-    compact = false,
-    onOpen,
-    onToggleSave,
-  }: Props = $props();
+  const { source, time, type = 'rss', title, excerpt, unread = true, saved = false, onOpen, onToggleSave }: Props = $props();
 
   function handleKeydown(event: KeyboardEvent) {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -57,13 +43,13 @@
   }
 </script>
 
-<article class="row" class:compact>
+<article class="row">
   <div class="hit-area" role="button" tabindex="0" onclick={onOpen} onkeydown={handleKeydown}>
     <UnreadDot {unread} />
     <div class="body">
       <StoryByline {type} {source} {time} />
       <h3 class="title" class:unread>{title}</h3>
-      {#if !compact && excerpt}
+      {#if excerpt}
         <p class="excerpt">{excerpt}</p>
       {/if}
     </div>
@@ -78,10 +64,6 @@
     padding: var(--row-pad-y) var(--gutter);
     border-bottom: 1px solid var(--border-hairline);
     align-items: flex-start;
-  }
-
-  .row.compact {
-    padding: var(--row-pad-y-compact) var(--gutter);
   }
 
   .hit-area {
