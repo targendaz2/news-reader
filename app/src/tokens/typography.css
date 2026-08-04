@@ -1,0 +1,24 @@
+:root {
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-ui: "Public Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  --text-h1: 28px;
+  --text-title: 27px;
+  --text-story: 16.5px;
+  --text-body: 16.5px;
+  --text-ui: 14px;
+  --text-ctrl: 13px;
+  --text-meta: 12px;
+  --text-excerpt: 13.5px;
+  --text-badge: 9px;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --leading-tight: 1.2;
+  --leading-snug: 1.28;
+  --leading-body: 1.66;
+  --leading-ui: 1.42;
+  --tracking-tight: -0.015em;
+  --tracking-badge: 0.08em;
+}
