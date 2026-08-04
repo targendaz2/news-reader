@@ -11,6 +11,7 @@
 
 <style>
   span {
+    display: inline-block;
     width: 8px;
     height: 8px;
     border-radius: 50%;
