@@ -19,6 +19,10 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-docs'),
   ],
   framework: getAbsolutePath('@storybook/sveltekit'),
+  features: {
+    menuOnboardingChecklist: false,
+    sidebarOnboardingChecklist: false,
+  },
 };
 
 export default config;
