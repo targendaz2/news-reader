@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { ComponentProps } from 'svelte';
+  import SaveButton from '../controls/save-button.svelte';
   import TypeBadge from './type-badge.svelte';
 
   interface Props {
@@ -44,11 +45,6 @@
       onOpen?.();
     }
   }
-
-  function toggleSave(event: MouseEvent) {
-    event.stopPropagation();
-    onToggleSave?.();
-  }
 </script>
 
 <div class="row" class:compact role="button" tabindex="0" onclick={onOpen} onkeydown={handleKeydown}>
@@ -64,16 +60,7 @@
       <div class="excerpt">{excerpt}</div>
     {/if}
   </div>
-  <button
-    type="button"
-    class="star"
-    class:saved
-    aria-pressed={saved}
-    aria-label={saved ? 'Remove from saved' : 'Save story'}
-    onclick={toggleSave}
-  >
-    {saved ? '★' : '☆'}
-  </button>
+  <SaveButton {saved} onclick={onToggleSave} />
 </div>
 
 <style>
@@ -154,25 +141,5 @@
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-  }
-
-  .star {
-    flex-shrink: 0;
-    border: none;
-    background: none;
-    font-size: 17px;
-    line-height: 1;
-    cursor: pointer;
-    padding: 2px;
-    color: var(--star-off);
-  }
-
-  .star.saved {
-    color: var(--brand);
-  }
-
-  .star:focus-visible {
-    outline: 2px solid var(--focus-ring);
-    outline-offset: 2px;
   }
 </style>
