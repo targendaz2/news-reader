@@ -2,6 +2,7 @@
   import type { ComponentProps } from 'svelte';
   import SaveButton from '../controls/save-button.svelte';
   import TypeBadge from './type-badge.svelte';
+  import UnreadDot from './unread-dot.svelte';
 
   interface Props {
     /** Source feed name, e.g. "Okta Release Notes". */
@@ -48,7 +49,7 @@
 </script>
 
 <div class="row" class:compact role="button" tabindex="0" onclick={onOpen} onkeydown={handleKeydown}>
-  <span class="dot" class:unread></span>
+  <UnreadDot {unread} />
   <div class="body">
     <div class="meta">
       <TypeBadge {type} />
@@ -80,19 +81,6 @@
   .row:focus-visible {
     outline: 2px solid var(--focus-ring);
     outline-offset: -2px;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-top: 7px;
-    flex-shrink: 0;
-    background: transparent;
-  }
-
-  .dot.unread {
-    background: var(--brand);
   }
 
   .body {
