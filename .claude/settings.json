@@ -1,0 +1,6 @@
+{
+  "enabledMcpjsonServers": ["drizzle-kit", "svelte"],
+  "permissions": {
+    "allow": ["mcp__svelte__svelte-autofixer"]
+  }
+}
