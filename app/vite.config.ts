@@ -2,7 +2,7 @@ import adapter from '@sveltejs/adapter-cloudflare';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
-export default defineConfig({
+const config = defineConfig({
   plugins: [
     sveltekit({
       compilerOptions: {
@@ -15,3 +15,5 @@ export default defineConfig({
     }),
   ],
 });
+
+export default config;
