@@ -37,7 +37,7 @@ const config = defineConfig(
   },
   {
     files: ['**/*.story.{js,ts,svelte}'],
-    // @ts-ignore
+    // @ts-expect-error: Storybook plugin is not typed yet
     extends: [storybook.configs['flat/recommended']],
   },
 );
