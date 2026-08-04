@@ -13,18 +13,25 @@
 
     /** Source type shown in the badge. */
     type?: ComponentProps<typeof StoryByline>['type'];
+
     /** Story headline. */
     title: string;
+
     /** Two-line preview of the story body; hidden when `compact`. */
     excerpt?: string;
+
     /** Shows the unread dot and keeps the title at full ink color. */
     unread?: boolean;
+
     /** Fills the star to mark this story as saved. */
     saved?: boolean;
+
     /** Hides the excerpt and tightens vertical padding for dense lists. */
     compact?: boolean;
+
     /** Called when the row is tapped to open the reader. */
     onOpen?: () => void;
+
     /** Called when the star is tapped to toggle saved state. */
     onToggleSave?: () => void;
   }
@@ -50,17 +57,19 @@
   }
 </script>
 
-<div class="row" class:compact role="button" tabindex="0" onclick={onOpen} onkeydown={handleKeydown}>
-  <UnreadDot {unread} />
-  <div class="body">
-    <StoryByline {type} {source} {time} />
-    <div class="title" class:unread>{title}</div>
-    {#if !compact && excerpt}
-      <div class="excerpt">{excerpt}</div>
-    {/if}
+<article class="row" class:compact>
+  <div class="hit-area" role="button" tabindex="0" onclick={onOpen} onkeydown={handleKeydown}>
+    <UnreadDot {unread} />
+    <div class="body">
+      <StoryByline {type} {source} {time} />
+      <h3 class="title" class:unread>{title}</h3>
+      {#if !compact && excerpt}
+        <p class="excerpt">{excerpt}</p>
+      {/if}
+    </div>
   </div>
   <SaveButton {saved} onclick={onToggleSave} />
-</div>
+</article>
 
 <style>
   .row {
@@ -68,7 +77,6 @@
     gap: 13px;
     padding: var(--row-pad-y) var(--gutter);
     border-bottom: 1px solid var(--border-hairline);
-    cursor: pointer;
     align-items: flex-start;
   }
 
@@ -76,7 +84,16 @@
     padding: var(--row-pad-y-compact) var(--gutter);
   }
 
-  .row:focus-visible {
+  .hit-area {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    gap: 13px;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+
+  .hit-area:focus-visible {
     outline: 2px solid var(--focus-ring);
     outline-offset: -2px;
   }
@@ -87,6 +104,7 @@
   }
 
   .title {
+    margin: 0;
     font-family: var(--font-display);
     font-size: var(--text-story);
     font-weight: var(--weight-semibold);
@@ -99,10 +117,10 @@
   }
 
   .excerpt {
+    margin: 5px 0 0;
     font-size: var(--text-excerpt);
     line-height: var(--leading-ui);
     color: var(--text-muted);
-    margin-top: 5px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
