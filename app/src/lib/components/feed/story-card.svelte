@@ -1,16 +1,18 @@
 <script lang="ts">
   import type { ComponentProps } from 'svelte';
   import SaveButton from '../controls/save-button.svelte';
-  import TypeBadge from './type-badge.svelte';
+  import StoryByline from './story-byline.svelte';
   import UnreadDot from './unread-dot.svelte';
 
   interface Props {
     /** Source feed name, e.g. "Okta Release Notes". */
     source: string;
+
     /** Relative time since publish, e.g. "2h". */
     time: string;
+
     /** Source type shown in the badge. */
-    type?: ComponentProps<typeof TypeBadge>['type'];
+    type?: ComponentProps<typeof StoryByline>['type'];
     /** Story headline. */
     title: string;
     /** Two-line preview of the story body; hidden when `compact`. */
@@ -51,11 +53,7 @@
 <div class="row" class:compact role="button" tabindex="0" onclick={onOpen} onkeydown={handleKeydown}>
   <UnreadDot {unread} />
   <div class="body">
-    <div class="meta">
-      <TypeBadge {type} />
-      <span class="source">{source}</span>
-      <span class="time">· {time}</span>
-    </div>
+    <StoryByline {type} {source} {time} />
     <div class="title" class:unread>{title}</div>
     {#if !compact && excerpt}
       <div class="excerpt">{excerpt}</div>
@@ -86,25 +84,6 @@
   .body {
     flex: 1;
     min-width: 0;
-  }
-
-  .meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 5px;
-    flex-wrap: wrap;
-  }
-
-  .source {
-    font-size: var(--text-meta);
-    font-weight: var(--weight-semibold);
-    color: var(--text-muted);
-  }
-
-  .time {
-    font-size: var(--text-meta);
-    color: var(--text-faint);
   }
 
   .title {
