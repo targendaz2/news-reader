@@ -6,7 +6,6 @@
   const { Story } = defineMeta({
     title: 'Controls/StatusPill',
     component: StatusPill,
-    tags: ['autodocs'],
     argTypes: {
       offline: { control: 'boolean' },
     },
