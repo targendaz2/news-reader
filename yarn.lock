@@ -1034,6 +1034,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@newsie/app@workspace:app"
   dependencies:
+    "@newsie/db": "workspace:*"
     "@storybook/addon-a11y": "npm:^10.5.6"
     "@storybook/addon-docs": "npm:^10.5.6"
     "@storybook/addon-svelte-csf": "npm:^5.1.2"
@@ -1049,7 +1050,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@newsie/db@workspace:packages/db":
+"@newsie/db@workspace:*, @newsie/db@workspace:packages/db":
   version: 0.0.0-use.local
   resolution: "@newsie/db@workspace:packages/db"
   dependencies:
