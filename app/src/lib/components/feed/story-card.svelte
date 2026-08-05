@@ -35,7 +35,7 @@
   <div class="hit-area" role="button" tabindex="0" onclick={onOpen} onkeydown={handleKeydown}>
     <UnreadDot {unread} />
     <div class="body">
-      <StoryByline type={story.type} source={story.source} time={story.time} />
+      <StoryByline {story} />
       <h3 class:unread>{story.title}</h3>
       {#if story.excerpt}
         <p>{story.excerpt}</p>

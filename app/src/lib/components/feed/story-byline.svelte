@@ -1,25 +1,19 @@
 <script lang="ts">
-  import type { ComponentProps } from 'svelte';
   import TypeBadge from './type-badge.svelte';
+  import type { Story } from '$lib/types';
 
   interface Props {
-    /** Source type shown in the badge. */
-    type?: ComponentProps<typeof TypeBadge>['type'];
-
-    /** Source feed name, e.g. "Okta Release Notes". */
-    source: string;
-
-    /** Relative time since publish, e.g. "2h". */
-    time: string;
+    /** Source story. */
+    story: Story;
   }
 
-  const { type = 'rss', source, time }: Props = $props();
+  const { story }: Props = $props();
 </script>
 
 <div>
-  <TypeBadge {type} />
-  <span class="source">{source}</span>
-  <span class="time">· {time}</span>
+  <TypeBadge type={story.type ?? 'rss'} />
+  <span class="source">{story.source}</span>
+  <span class="time">· {story.time}</span>
 </div>
 
 <style>

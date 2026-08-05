@@ -6,16 +6,11 @@
     title: 'Feed/StoryByline',
     component: StoryByline,
     argTypes: {
-      type: {
-        control: { type: 'select' },
-        options: ['rss', 'email', 'social', 'release', 'github'],
-      },
-      source: { control: 'text' },
-      time: { control: 'text' },
+      story: { control: 'object' },
     },
   });
 </script>
 
-<Story name="Release" args={{ type: 'release', source: 'Okta Release Notes', time: '2h' }} />
+<Story name="Release" args={{ story: { type: 'release', source: 'Okta Release Notes', time: '2h' } }} />
 
-<Story name="RSS" args={{ type: 'rss', source: 'Kotaku', time: '3h' }} />
+<Story name="RSS" args={{ story: { type: 'rss', source: 'Kotaku', time: '3h' } }} />
