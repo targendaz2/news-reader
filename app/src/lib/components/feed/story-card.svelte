@@ -1,24 +1,12 @@
 <script lang="ts">
-  import type { ComponentProps } from 'svelte';
   import SaveButton from '../controls/save-button.svelte';
   import StoryByline from './story-byline.svelte';
   import UnreadDot from './unread-dot.svelte';
+  import { type Story } from '$lib/types';
 
   interface Props {
-    /** Source feed name, e.g. "Okta Release Notes". */
-    source: string;
-
-    /** Relative time since publish, e.g. "2h". */
-    time: string;
-
-    /** Source type shown in the badge. */
-    type?: ComponentProps<typeof StoryByline>['type'];
-
-    /** Story headline. */
-    title: string;
-
-    /** Two-line preview of the story body; hidden when `compact`. */
-    excerpt?: string;
+    /** Source story. */
+    story: Story;
 
     /** Shows the unread dot and keeps the title at full ink color. */
     unread?: boolean;
@@ -33,7 +21,7 @@
     onToggleSave?: () => void;
   }
 
-  const { source, time, type = 'rss', title, excerpt, unread = true, saved = false, onOpen, onToggleSave }: Props = $props();
+  const { story, unread = true, saved = false, onOpen, onToggleSave }: Props = $props();
 
   function handleKeydown(event: KeyboardEvent) {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -47,10 +35,10 @@
   <div class="hit-area" role="button" tabindex="0" onclick={onOpen} onkeydown={handleKeydown}>
     <UnreadDot {unread} />
     <div class="body">
-      <StoryByline {type} {source} {time} />
-      <h3 class:unread>{title}</h3>
-      {#if excerpt}
-        <p>{excerpt}</p>
+      <StoryByline type={story.type} source={story.source} time={story.time} />
+      <h3 class:unread>{story.title}</h3>
+      {#if story.excerpt}
+        <p>{story.excerpt}</p>
       {/if}
     </div>
   </div>

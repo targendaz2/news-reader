@@ -1,21 +1,15 @@
 <script lang="ts">
-  const LABELS = {
-    rss: 'RSS',
-    email: 'EMAIL',
-    social: 'SOCIAL',
-    release: 'RELEASE',
-    github: 'GITHUB',
-  } as const;
+  import { storyTypes } from '$lib/types';
 
   interface Props {
     /** Source type this badge marks. */
-    type?: keyof typeof LABELS;
+    type?: keyof typeof storyTypes;
   }
 
   const { type = 'rss' }: Props = $props();
 </script>
 
-<span>{LABELS[type]}</span>
+<span>{storyTypes[type]}</span>
 
 <style>
   span {
