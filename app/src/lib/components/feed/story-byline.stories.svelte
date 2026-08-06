@@ -11,6 +11,6 @@
   });
 </script>
 
-<Story name="Release" args={{ story: { type: 'release', source: 'Okta Release Notes', time: '2h' } }} />
+<Story name="Release" args={{ story: { type: 'release', source: 'Okta Release Notes', time: Date.now() } }} />
 
-<Story name="RSS" args={{ story: { type: 'rss', source: 'Kotaku', time: '3h' } }} />
+<Story name="RSS" args={{ story: { type: 'rss', source: 'Kotaku', time: Date.now() } }} />

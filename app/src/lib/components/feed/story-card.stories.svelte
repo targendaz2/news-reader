@@ -25,7 +25,7 @@
     story: {
       type: 'release',
       source: 'Okta Release Notes',
-      time: '2h',
+      time: new Date('2025-09-01T12:00:00Z'),
       title: 'Identity Engine 2025.09 — adaptive MFA & new audit log',
       excerpt: 'Adaptive MFA policies can now branch on device posture.',
     },
@@ -40,7 +40,7 @@
     story: {
       type: 'rss',
       source: 'Kotaku',
-      time: '3h',
+      time: Date.now(),
       title: 'The long, strange history of the pause menu',
       excerpt: 'A feature-length look at a humble UI element.',
     },
@@ -55,7 +55,7 @@
     story: {
       type: 'rss',
       source: 'Kotaku',
-      time: '3h',
+      time: Date.now(),
       title: 'The long, strange history of the pause menu',
       excerpt: 'A feature-length look at a humble UI element.',
     },

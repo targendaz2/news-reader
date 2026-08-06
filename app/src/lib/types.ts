@@ -10,8 +10,8 @@ export interface Story {
   /** Source feed name, e.g. "Okta Release Notes". */
   source: string;
 
-  /** Relative time since publish, e.g. "2h". */
-  time: string;
+  /** Time when the story was published. */
+  time: Date;
 
   /** Source type shown in the badge. */
   type?: keyof typeof storyTypes;
