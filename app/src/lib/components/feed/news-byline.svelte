@@ -1,5 +1,5 @@
 <script lang="ts">
-  import TypeBadge from './type-badge.svelte';
+  import { TypeBadge } from '../data';
   import type { NewsItem } from '$lib/types';
   import { formatDistanceToNow, formatRFC3339 } from 'date-fns';
 

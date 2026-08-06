@@ -3,23 +3,21 @@
   import TypeBadge from './type-badge.svelte';
 
   const { Story } = defineMeta({
-    title: 'Design System/Feed/TypeBadge',
+    title: 'Design System/Data/TypeBadge',
     component: TypeBadge,
     argTypes: {
       type: {
         control: { type: 'select' },
         options: ['rss', 'email', 'social', 'release', 'github'],
       },
+      variant: {
+        control: { type: 'select' },
+        options: ['chip', 'column'],
+      },
     },
   });
 </script>
 
-<Story name="RSS" args={{ type: 'rss' }} />
+<Story name="Chip" args={{ type: 'rss', variant: 'chip' }} />
 
-<Story name="Email" args={{ type: 'email' }} />
-
-<Story name="Social" args={{ type: 'social' }} />
-
-<Story name="Release" args={{ type: 'release' }} />
-
-<Story name="GitHub" args={{ type: 'github' }} />
+<Story name="Column" args={{ type: 'release', variant: 'column' }} />
