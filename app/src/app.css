@@ -5,3 +5,9 @@
 @import "tokens/spacing.css";
 @import "tokens/radii.css";
 @import "tokens/shadows.css";
+
+body {
+  background: var(--surface-page);
+  color: var(--text-body);
+  font-family: var(--font-ui);
+}
