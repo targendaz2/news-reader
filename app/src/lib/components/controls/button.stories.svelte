@@ -4,7 +4,7 @@
   import Button from './button.svelte';
 
   const { Story } = defineMeta({
-    title: 'Controls/Button',
+    title: 'Design System/Controls/Button',
     component: Button,
     argTypes: {
       variant: {

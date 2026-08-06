@@ -3,7 +3,7 @@
   import UnreadDot from './unread-dot.svelte';
 
   const { Story } = defineMeta({
-    title: 'Feed/UnreadDot',
+    title: 'Design System/Feed/UnreadDot',
     component: UnreadDot,
     argTypes: {
       unread: { control: 'boolean' },

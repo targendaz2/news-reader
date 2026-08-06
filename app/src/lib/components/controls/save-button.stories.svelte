@@ -4,7 +4,7 @@
   import SaveButton from './save-button.svelte';
 
   const { Story } = defineMeta({
-    title: 'Controls/SaveButton',
+    title: 'Design System/Controls/SaveButton',
     component: SaveButton,
     argTypes: {
       saved: { control: 'boolean' },

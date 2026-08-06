@@ -4,7 +4,7 @@
   import FilterPill from './filter-pill.svelte';
 
   const { Story } = defineMeta({
-    title: 'Controls/FilterPill',
+    title: 'Design System/Controls/FilterPill',
     component: FilterPill,
     argTypes: {
       label: { control: 'text' },

@@ -4,7 +4,7 @@
   import NewsCard from './news-card.svelte';
 
   const { Story } = defineMeta({
-    title: 'Feed/NewsCard',
+    title: 'Design System/Feed/NewsCard',
     component: NewsCard,
     argTypes: {
       newsItem: { control: 'object' },

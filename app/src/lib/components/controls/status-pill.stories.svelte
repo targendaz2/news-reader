@@ -4,7 +4,7 @@
   import StatusPill from './status-pill.svelte';
 
   const { Story } = defineMeta({
-    title: 'Controls/StatusPill',
+    title: 'Design System/Controls/StatusPill',
     component: StatusPill,
     argTypes: {
       offline: { control: 'boolean' },

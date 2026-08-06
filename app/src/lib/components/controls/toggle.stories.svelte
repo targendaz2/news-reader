@@ -4,7 +4,7 @@
   import Toggle from './toggle.svelte';
 
   const { Story } = defineMeta({
-    title: 'Controls/Toggle',
+    title: 'Design System/Controls/Toggle',
     component: Toggle,
     argTypes: {
       on: { control: 'boolean' },

@@ -3,7 +3,7 @@
   import NewsByline from './news-byline.svelte';
 
   const { Story } = defineMeta({
-    title: 'Feed/NewsByline',
+    title: 'Design System/Feed/NewsByline',
     component: NewsByline,
     argTypes: {
       newsItem: { control: 'object' },

@@ -3,7 +3,7 @@
   import TypeBadge from './type-badge.svelte';
 
   const { Story } = defineMeta({
-    title: 'Feed/TypeBadge',
+    title: 'Design System/Feed/TypeBadge',
     component: TypeBadge,
     argTypes: {
       type: {
