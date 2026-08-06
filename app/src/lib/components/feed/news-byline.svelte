@@ -1,22 +1,22 @@
 <script lang="ts">
   import TypeBadge from './type-badge.svelte';
-  import type { Story } from '$lib/types';
+  import type { NewsItem } from '$lib/types';
   import { formatDistanceToNow, formatRFC3339 } from 'date-fns';
 
   interface Props {
     /** Source story. */
-    story: Story;
+    newsItem: NewsItem;
   }
 
-  const { story }: Props = $props();
+  const { newsItem }: Props = $props();
 
-  const formattedTime = $derived(formatRFC3339(story.time));
-  const relativeTime = $derived(formatDistanceToNow(story.time, { addSuffix: true }));
+  const formattedTime = $derived(formatRFC3339(newsItem.time));
+  const relativeTime = $derived(formatDistanceToNow(newsItem.time, { addSuffix: true }));
 </script>
 
 <div>
-  <TypeBadge type={story.type ?? 'rss'} />
-  <span class="source">{story.source}</span>
+  <TypeBadge type={newsItem.type ?? 'rss'} />
+  <span class="source">{newsItem.source}</span>
   <time datetime={formattedTime}>· {relativeTime}</time>
 </div>
 

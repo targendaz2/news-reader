@@ -1,12 +1,12 @@
 <script lang="ts">
   import SaveButton from '../controls/save-button.svelte';
-  import StoryByline from './story-byline.svelte';
+  import NewsByline from './news-byline.svelte';
   import UnreadDot from './unread-dot.svelte';
-  import { type Story } from '$lib/types';
+  import type { NewsItem } from '$lib/types';
 
   interface Props {
-    /** Source story. */
-    story: Story;
+    /** Source article. */
+    newsItem: NewsItem;
 
     /** Shows the unread dot and keeps the title at full ink color. */
     unread?: boolean;
@@ -21,7 +21,7 @@
     onToggleSave?: () => void;
   }
 
-  const { story, unread = true, saved = false, onOpen, onToggleSave }: Props = $props();
+  const { newsItem, unread = true, saved = false, onOpen, onToggleSave }: Props = $props();
 
   function handleKeydown(event: KeyboardEvent) {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -31,14 +31,14 @@
   }
 </script>
 
-<article class="row">
+<article>
   <div class="hit-area" role="button" tabindex="0" onclick={onOpen} onkeydown={handleKeydown}>
     <UnreadDot {unread} />
     <div class="body">
-      <StoryByline {story} />
-      <h3 class:unread>{story.title}</h3>
-      {#if story.excerpt}
-        <p>{story.excerpt}</p>
+      <NewsByline {newsItem} />
+      <h3 class:unread>{newsItem.title}</h3>
+      {#if newsItem.excerpt}
+        <p>{newsItem.excerpt}</p>
       {/if}
     </div>
   </div>

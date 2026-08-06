@@ -1,13 +1,13 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import { fn } from 'storybook/test';
-  import StoryCard from './story-card.svelte';
+  import NewsCard from './news-card.svelte';
 
   const { Story } = defineMeta({
-    title: 'Feed/StoryCard',
-    component: StoryCard,
+    title: 'Feed/NewsCard',
+    component: NewsCard,
     argTypes: {
-      story: { control: 'object' },
+      newsItem: { control: 'object' },
       unread: { control: 'boolean' },
       saved: { control: 'boolean' },
     },
@@ -22,7 +22,7 @@
 <Story
   name="Unread"
   args={{
-    story: {
+    newsItem: {
       type: 'release',
       source: 'Okta Release Notes',
       time: new Date('2025-09-01T12:00:00Z'),
@@ -37,7 +37,7 @@
 <Story
   name="Read"
   args={{
-    story: {
+    newsItem: {
       type: 'rss',
       source: 'Kotaku',
       time: Date.now(),
@@ -52,7 +52,7 @@
 <Story
   name="Saved"
   args={{
-    story: {
+    newsItem: {
       type: 'rss',
       source: 'Kotaku',
       time: Date.now(),

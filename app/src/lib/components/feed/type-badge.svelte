@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { storyTypes } from '$lib/types';
+  import { sourceTypes } from '$lib/types';
 
   interface Props {
     /** Source type this badge marks. */
-    type?: keyof typeof storyTypes;
+    type?: keyof typeof sourceTypes;
   }
 
   const { type = 'rss' }: Props = $props();
 </script>
 
-<span>{storyTypes[type]}</span>
+<span>{sourceTypes[type]}</span>
 
 <style>
   span {

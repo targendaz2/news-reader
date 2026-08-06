@@ -1,4 +1,4 @@
-export const storyTypes = {
+export const sourceTypes = {
   rss: 'RSS',
   email: 'EMAIL',
   social: 'SOCIAL',
@@ -6,19 +6,19 @@ export const storyTypes = {
   github: 'GITHUB',
 } as const;
 
-export interface Story {
+export interface NewsItem {
   /** Source feed name, e.g. "Okta Release Notes". */
   source: string;
 
-  /** Time when the story was published. */
+  /** Time when the news item was published. */
   time: Date;
 
   /** Source type shown in the badge. */
-  type?: keyof typeof storyTypes;
+  type?: keyof typeof sourceTypes;
 
-  /** Story headline. */
+  /** News item headline. */
   title: string;
 
-  /** Two-line preview of the story body. */
+  /** Two-line preview of the news item body. */
   excerpt?: string;
 }
