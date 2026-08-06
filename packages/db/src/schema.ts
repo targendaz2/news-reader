@@ -6,8 +6,11 @@ const topics = ['apple', 'dev', 'games', 'tech'] as const;
 
 export const sources = snakeCase.table('sources', {
   id: integer().primaryKey({ autoIncrement: true }),
-  name: text().notNull(),
-  type: text({ enum: sourceTypes }).default('rss'),
+  title: text().notNull(),
+  type: text({ enum: sourceTypes }).notNull().default('rss'),
+  url: text().notNull(),
+  lastFetchedAt: integer({ mode: 'timestamp_ms' }),
+  active: integer({ mode: 'boolean' }).notNull().default(true),
 });
 
 export const newsItems = snakeCase.table('news_items', {
@@ -15,7 +18,9 @@ export const newsItems = snakeCase.table('news_items', {
   time: integer({ mode: 'timestamp' }).notNull(),
   title: text().notNull(),
   excerpt: text(),
+  url: text().notNull(),
   topic: text({ enum: topics }).notNull(),
+  publishedAt: integer({ mode: 'timestamp_ms' }),
   sourceId: integer().notNull(),
 });
 
