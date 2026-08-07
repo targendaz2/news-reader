@@ -22,6 +22,7 @@
     border-radius: var(--radius-badge);
     background: var(--chip-bg);
     color: var(--brand);
+    text-transform: uppercase;
   }
 
   span.column {
