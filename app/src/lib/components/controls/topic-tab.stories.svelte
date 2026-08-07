@@ -11,7 +11,7 @@
       active: { control: 'boolean' },
     },
     args: {
-      label: 'Dev',
+      topic: { title: 'Dev' },
       onclick: fn(),
     },
   });
