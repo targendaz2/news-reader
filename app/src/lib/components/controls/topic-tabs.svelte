@@ -14,6 +14,7 @@
 </script>
 
 <div class="row">
+  <TopicTab label="All topics" active={active === null} onclick={() => (active = null)} />
   {#each topics as topic (topic.id)}
     <TopicTab label={topic.title} active={topic.id === active} onclick={() => (active = topic.id)} />
   {/each}
