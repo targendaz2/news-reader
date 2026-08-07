@@ -23,9 +23,11 @@
   name="Unread"
   args={{
     newsItem: {
-      type: 'release',
-      source: 'Okta Release Notes',
-      time: new Date('2025-09-01T12:00:00Z'),
+      source: {
+        type: 'release',
+        title: 'Okta Release Notes',
+      },
+      publishedAt: new Date('2025-09-01T12:00:00Z'),
       title: 'Identity Engine 2025.09 — adaptive MFA & new audit log',
       excerpt: 'Adaptive MFA policies can now branch on device posture.',
     },
@@ -38,9 +40,11 @@
   name="Read"
   args={{
     newsItem: {
-      type: 'rss',
-      source: 'Kotaku',
-      time: Date.now(),
+      source: {
+        type: 'rss',
+        title: 'Kotaku',
+      },
+      publishedAt: Date.now(),
       title: 'The long, strange history of the pause menu',
       excerpt: 'A feature-length look at a humble UI element.',
     },
@@ -53,9 +57,11 @@
   name="Saved"
   args={{
     newsItem: {
-      type: 'rss',
-      source: 'Kotaku',
-      time: Date.now(),
+      source: {
+        type: 'rss',
+        title: 'Kotaku',
+      },
+      publishedAt: Date.now(),
       title: 'The long, strange history of the pause menu',
       excerpt: 'A feature-length look at a humble UI element.',
     },

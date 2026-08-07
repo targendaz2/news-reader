@@ -10,14 +10,14 @@
 
   const { newsItem }: Props = $props();
 
-  const formattedTime = $derived(formatRFC3339(newsItem.time));
-  const relativeTime = $derived(formatDistanceToNow(newsItem.time, { addSuffix: true }));
+  const formattedPublishedAt = $derived(formatRFC3339(newsItem.publishedAt));
+  const relativePublishedAt = $derived(formatDistanceToNow(newsItem.publishedAt, { addSuffix: true }));
 </script>
 
 <div>
-  <TypeBadge type={newsItem.type ?? 'rss'} />
-  <span class="source">{newsItem.source}</span>
-  <time datetime={formattedTime}>· {relativeTime}</time>
+  <TypeBadge type={newsItem.source.type ?? 'rss'} />
+  <span class="source">{newsItem.source.title}</span>
+  <time datetime={formattedPublishedAt}>· {relativePublishedAt}</time>
 </div>
 
 <style>

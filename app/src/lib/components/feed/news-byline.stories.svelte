@@ -11,6 +11,28 @@
   });
 </script>
 
-<Story name="Release" args={{ newsItem: { type: 'release', source: 'Okta Release Notes', time: Date.now() } }} />
+<Story
+  name="Release"
+  args={{
+    newsItem: {
+      source: {
+        type: 'release',
+        title: 'Okta Release Notes',
+      },
+      publishedAt: Date.now(),
+    },
+  }}
+/>
 
-<Story name="RSS" args={{ newsItem: { type: 'rss', source: 'Kotaku', time: Date.now() } }} />
+<Story
+  name="RSS"
+  args={{
+    newsItem: {
+      source: {
+        type: 'rss',
+        title: 'Kotaku',
+      },
+      publishedAt: Date.now(),
+    },
+  }}
+/>
