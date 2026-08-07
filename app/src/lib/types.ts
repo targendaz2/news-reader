@@ -1,11 +1,3 @@
-export const sourceTypes = {
-  rss: 'RSS',
-  email: 'EMAIL',
-  social: 'SOCIAL',
-  release: 'RELEASE',
-  github: 'GITHUB',
-} as const;
-
 export interface NewsItem {
   /** Source feed name, e.g. "Okta Release Notes". */
   source: string;
@@ -14,7 +6,7 @@ export interface NewsItem {
   time: Date;
 
   /** Source type shown in the badge. */
-  type?: keyof typeof sourceTypes;
+  type?: string;
 
   /** News item headline. */
   title: string;

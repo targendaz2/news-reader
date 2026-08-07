@@ -1,9 +1,7 @@
 <script lang="ts">
-  import { sourceTypes } from '$lib/types';
-
   interface Props {
     /** Source type this badge marks. */
-    type?: keyof typeof sourceTypes;
+    type?: string;
     /** `chip` (default): inline, auto-width badge for the feed. `column`: fixed-width, centered badge for aligned list rows like SourceCard. */
     variant?: 'chip' | 'column';
   }
@@ -11,7 +9,7 @@
   const { type = 'rss', variant = 'chip' }: Props = $props();
 </script>
 
-<span class:column={variant === 'column'}>{sourceTypes[type]}</span>
+<span class:column={variant === 'column'}>{type}</span>
 
 <style>
   span {
