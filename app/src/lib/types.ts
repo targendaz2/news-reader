@@ -18,6 +18,9 @@ export interface Topic {
   title: string;
 }
 
+/** Feed filter view: all news items, unread only, or saved only. */
+export type NewsFilter = 'all' | 'unread' | 'saved';
+
 export interface NewsItem {
   /** Unique ID of the news item.  */
   id: number;
