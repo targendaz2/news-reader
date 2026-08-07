@@ -1,11 +1,10 @@
 <script lang="ts">
-  import { sourceTypes } from '$lib/types';
   import { Toggle } from '../controls';
   import { TypeBadge } from '../data';
 
   interface Props {
     /** Source type shown in the type label. */
-    type?: keyof typeof sourceTypes;
+    type?: string;
 
     /** Source display name, e.g. "Okta Release Notes". */
     name: string;
