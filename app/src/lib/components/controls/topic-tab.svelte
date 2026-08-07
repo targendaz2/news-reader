@@ -1,8 +1,7 @@
 <script lang="ts">
-  import type { Topic } from '$lib/types';
   interface Props {
-    /** Topic. */
-    topic: Topic;
+    /** Topic label text, e.g. "Dev", "Games", "All topics". */
+    label: string;
 
     /** Whether this is the selected topic. */
     active?: boolean;
@@ -11,11 +10,11 @@
     onclick?: () => void;
   }
 
-  const { topic, active = false, onclick }: Props = $props();
+  const { label, active = false, onclick }: Props = $props();
 </script>
 
 <button type="button" class:active aria-pressed={active} {onclick}>
-  {topic.title}
+  {label}
 </button>
 
 <style>
