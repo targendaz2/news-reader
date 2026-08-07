@@ -74,3 +74,8 @@ tasks:
       - cf-typegen:app
       - cf-typegen:db
       - cf-typegen:feed-reader
+
+  deploy:
+    desc: Deploys the entire project
+    deps:
+      - deploy:app
