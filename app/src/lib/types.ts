@@ -13,6 +13,11 @@ export interface Source {
   active: boolean;
 }
 
+export interface Topic {
+  id: number;
+  title: string;
+}
+
 export interface NewsItem {
   /** Unique ID of the news item.  */
   id: number;
@@ -25,11 +30,11 @@ export interface NewsItem {
 
   url: string;
 
-  topic: string;
-
   /** Time when the news item was published. */
   publishedAt: Date;
 
   /** Source feed. */
   source: Source;
+
+  topic: Topic;
 }
