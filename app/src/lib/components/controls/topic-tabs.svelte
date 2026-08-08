@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Topic } from '$lib/types';
+
   import TopicTab from './topic-tab.svelte';
 
   interface Props {

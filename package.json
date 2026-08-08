@@ -8,7 +8,8 @@
     "workers/*"
   ],
   "scripts": {
-    "format": "yarn workspaces foreach -A exec prettier --write ."
+    "format": "yarn workspaces foreach -A exec oxfmt",
+    "format:check": "yarn workspaces foreach -A exec oxfmt --check"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -19,9 +20,7 @@
     "eslint-plugin-svelte": "^3.22.0",
     "globals": "^17.8.0",
     "markdownlint-cli2": "^0.23.2",
-    "prettier": "^3.9.6",
-    "prettier-plugin-organize-imports": "^4.3.0",
-    "prettier-plugin-svelte": "^4.1.1",
+    "oxfmt": "^0.62.0",
     "typescript": "^6.0.0",
     "typescript-eslint": "^8.65.0"
   },

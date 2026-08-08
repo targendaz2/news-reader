@@ -1,6 +1,4 @@
 {
   "fix": true,
-  "ignores": [
-    ".claude/**/*"
-  ]
+  "ignores": [".claude/**/*"]
 }

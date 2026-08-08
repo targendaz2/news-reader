@@ -1,6 +1,7 @@
 <script module lang="ts">
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import type { ComponentProps } from 'svelte';
+
   import Toast from './toast.svelte';
 
   const { Story } = defineMeta({

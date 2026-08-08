@@ -22,7 +22,7 @@ export interface Topic {
 export type NewsFilter = 'all' | 'unread' | 'saved';
 
 export interface NewsItem {
-  /** Unique ID of the news item.  */
+  /** Unique ID of the news item. */
   id: number;
 
   /** News item headline. */

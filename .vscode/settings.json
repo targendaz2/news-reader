@@ -5,11 +5,14 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
   "files.associations": {
     "*.css": "css",
     "wrangler.json": "jsonc"
   },
-  "prettier.requireConfig": true
+  "oxc.enable.oxfmt": true,
+  "oxc.enable.oxlint": false,
+  "oxc.requireConfig": true,
+  "prettier.enable": false
 }

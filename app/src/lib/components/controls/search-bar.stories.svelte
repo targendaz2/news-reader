@@ -1,5 +1,6 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
+
   import SearchBar from './search-bar.svelte';
 
   const { Story } = defineMeta({

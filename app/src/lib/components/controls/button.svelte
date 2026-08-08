@@ -1,9 +1,12 @@
 <script lang="ts">
-  import type { HTMLButtonAttributes } from 'svelte/elements';
   import type { Snippet } from 'svelte';
+  import type { HTMLButtonAttributes } from 'svelte/elements';
 
   interface Props extends HTMLButtonAttributes {
-    /** Visual style: `link` for quiet red text actions (Refresh, Sources), `outline` for Mark-as-read, `dashed` for the + Add a source affordance. */
+    /**
+     * Visual style: `link` for quiet red text actions (Refresh, Sources), `outline` for Mark-as-read, `dashed` for the + Add a source
+     * affordance.
+     */
     variant?: 'link' | 'outline' | 'dashed';
 
     /** Button content. */

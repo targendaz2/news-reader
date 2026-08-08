@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { NewsFilter } from '$lib/types';
+
   import FilterPill from './filter-pill.svelte';
 
   interface Props {

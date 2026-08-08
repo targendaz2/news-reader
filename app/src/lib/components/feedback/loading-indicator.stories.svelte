@@ -1,5 +1,6 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
+
   import LoadingIndicator from './loading-indicator.svelte';
 
   const { Story } = defineMeta({

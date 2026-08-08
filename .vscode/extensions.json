@@ -1,12 +1,12 @@
 {
   "recommendations": [
     "svelte.svelte-vscode",
-    "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "task.vscode-task",
     "vitest.explorer",
     "redhat.vscode-yaml",
-    "davidanson.vscode-markdownlint"
+    "davidanson.vscode-markdownlint",
+    "oxc.oxc-vscode"
   ]
 }

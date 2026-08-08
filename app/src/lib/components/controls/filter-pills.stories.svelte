@@ -1,5 +1,6 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
+
   import FilterPills from './filter-pills.svelte';
 
   const { Story } = defineMeta({

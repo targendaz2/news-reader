@@ -1,8 +1,9 @@
 <script lang="ts">
+  import type { NewsItem } from '$lib/types';
+
   import SaveButton from '../controls/save-button.svelte';
   import NewsByline from './news-byline.svelte';
   import UnreadDot from './unread-dot.svelte';
-  import type { NewsItem } from '$lib/types';
 
   interface Props {
     /** Source article. */

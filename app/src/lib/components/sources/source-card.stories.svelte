@@ -2,6 +2,7 @@
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import { fn } from 'storybook/test';
   import type { ComponentProps } from 'svelte';
+
   import SourceCard from './source-card.svelte';
 
   const { Story } = defineMeta({

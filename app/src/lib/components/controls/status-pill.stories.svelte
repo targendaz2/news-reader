@@ -1,6 +1,7 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import { fn } from 'storybook/test';
+
   import StatusPill from './status-pill.svelte';
 
   const { Story } = defineMeta({
