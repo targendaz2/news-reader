@@ -1,5 +1,6 @@
 /// <reference types="vite/client" />
 import type { Preview } from '@storybook/sveltekit';
+import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import '../src/app.css';
 
 const preview: Preview = {
@@ -15,7 +16,13 @@ const preview: Preview = {
         method: 'alphabetical',
       },
     },
+    viewport: {
+      options: INITIAL_VIEWPORTS,
+    },
   },
+  // initialGlobals: {
+  //   viewport: { value: 'iphone14pro', isRotated: false },
+  // },
   tags: ['autodocs'],
 };
 
