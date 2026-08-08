@@ -26,6 +26,7 @@
     "@storybook/addon-a11y": "^10.5.7",
     "@storybook/addon-docs": "^10.5.7",
     "@storybook/addon-svelte-csf": "^5.1.2",
+    "@storybook/addon-themes": "^10.5.7",
     "@storybook/sveltekit": "^10.5.7",
     "@sveltejs/adapter-cloudflare": "^7.2.8",
     "@sveltejs/kit": "^2.63.0",
